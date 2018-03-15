@@ -6,6 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"os"
 	"syscall"
 
 	"github.com/amoghe/go-crypt"
@@ -29,7 +30,7 @@ func main() {
 		saltStr = encoding.EncodeToString(salt)
 	}
 
-	fmt.Print("Enter password:")
+	fmt.Fprint(os.Stderr, "Enter password:")
 	bytePassword, err := terminal.ReadPassword(int(syscall.Stdin))
 	if err != nil {
 		log.Fatal("Read password failed:", err)

@@ -1,6 +1,6 @@
 .PHONY: build
 build:
-	go build unixhash.go
+	go build genpasshash.go
 
 .PHONY: deps
 deps:
@@ -9,5 +9,5 @@ deps:
 
 .PHONY: clean
 clean:
-	- rm unixhash
+	- rm genpasshash
 	- rm *.exe
